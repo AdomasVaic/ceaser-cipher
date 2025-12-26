@@ -1,5 +1,6 @@
-key = 5
-def encrypt(n, text):
+
+
+def caeser_encrypt(n, text):
     out = []
     for char in text:
         cipher = ord(char) + n
@@ -12,7 +13,7 @@ def encrypt(n, text):
     output = "".join(out)
     return output
 
-def decrypt(n, encrypted_text):
+def caeser_decrypt(n, encrypted_text):
     out = []
     for char in encrypted_text:
         plain = ord(char) - n
@@ -26,11 +27,5 @@ def decrypt(n, encrypted_text):
         out.append(plain)
     output = "".join(out)
     return output
-
-a = encrypt(key, "SIAURES PIETUS")
-print(a)
-
-b = decrypt(key, a)
-print (b)
 
 
